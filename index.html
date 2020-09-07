@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my music player</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css' />
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="music__container">
+            <div class="music__caption">
+                <h1 id="title">music namrr</h1>
+                <small id="artist">artish name </small>
+            </div>
+            <div class="img__container ">
+
+                <img src="./images/sath.jpeg" alt="">
+            </div>
+            <!-- audio -->
+            <audio id="audio" src="./music/Sandese Aate Hain.mp3"></audio>
+
+            <!-- audio progress -->
+            <div class="progress__container" id="progress__container">
+                <div class="audio__duration_meter">
+                    <div class="current" id="current">
+                        0:00
+                    </div>
+                    <div class="duration" id="duration">
+                        0:00
+                    </div>
+                </div>
+
+                <div class="progress_div" id='progress_div'>
+                    <div class="progress" id="progress"> </div>
+                </div>
+            </div>
+
+            <!-- audio controler -->
+            <div class="audio__container">
+                <i class="fas fa-backward" id="prev" title="previous song"></i>
+                <i class="fas fa-play play" id="play" title="pause song"></i>
+                <i class="fas fa-forward" id="next" title="next song"></i>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

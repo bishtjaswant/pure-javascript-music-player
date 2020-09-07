@@ -1,0 +1,175 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;500&display=swap');
+
+
+
+
+*,
+*::before,
+*::after{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 62.5%;
+    font-family: 'Jost', sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f6f6f6;
+}
+
+.music__container {
+/*     
+    width: 35rem; */
+    height: 35rem;
+    width: 28rem; 
+    border-radius: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 1.2rem 2rem 0.5rem rgba(0,0,0,0.5);
+
+    padding: 3rem;
+}
+
+.music__caption {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.music__caption h1{
+    font-size: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+    /* margin-top: 1rem; */
+    word-spacing: 0.5rem;
+    color: #171717;
+    font-weight: 700;
+    text-shadow: 0 0.5rem 0.1rem rgba(0,0,0,0.2);
+    
+}
+
+.music__caption small{
+     
+    font-size: 1.6rem;
+    color: #cccaca;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    font-weight: 200;
+}
+
+
+.img__container {
+
+    width: 14rem;
+    height: 14rem;
+    /* border: 1px solid; */
+    margin: auto;
+}
+
+
+.img__container img{
+    width: 100%;
+    box-shadow: 0 1.2rem 2rem 0.5rem rgba(0,0,0,0.5);
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+} 
+
+.audio__container {
+    display: flex;
+justify-content: center;
+ 
+    align-items: center;
+    /* border: 1px solid; */
+    margin-top: 1rem;
+
+}
+
+
+.audio__container .fas {
+    font-size: 0.9rem;
+    filter: drop-shadow(0 1.2rem 2rem 0.5rem rgba(0,0,0,0.6));
+    cursor: pointer;
+    margin: 1.2rem 1rem;
+}
+
+.audio__container .play{
+    border: 1px solid;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio__container .play:hover{
+    background-color: #f6f6f6;
+    color: #171717;
+    box-shadow: 0 1rem 2rem 0.1rem rgba(0,0,0,0.3);
+
+}
+
+.animate {
+    animation: rotation 3s linear infinite;
+}
+
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    } 
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* prrogress bar */
+.progress__container{
+    
+    /* border: 1px solid; */
+    width: 100%;
+    height: auto; 
+    margin-top: 1.5rem;
+}
+.audio__duration_meter{ 
+        display: flex;
+        justify-content: space-between;
+        font-size: 1rem;
+  
+}
+
+.progress_div{
+             width: 100%;
+        height: 0.8rem;
+        border: 1px solid;
+        appearance: none;
+        box-shadow: 3px 5px 39px -2px rgba(0,0,0,0.56),-13px -4px 39px -2px rgba(0,0,0,0.56);        ;
+        position: relative;
+        cursor: pointer;
+        border-radius: 3rem;
+        transition: all 2s linear;
+        background-color: #ffffff;
+}
+
+
+.progress_div .progress {
+
+    border-radius: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(233, 58, 58);
+    width: 0%;
+    height: 100%;
+}
